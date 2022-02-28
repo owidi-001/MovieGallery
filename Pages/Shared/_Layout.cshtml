@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MoviesApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MoviesApp.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+    <nav class="nav flex">
+        <ul class="flex">
+            <li><a asp-area="" asp-page="/Index">Home</a></li>
+            <li><a asp-area="" asp-page="./Movies">Movies</a></li>
+            <li><a asp-area="" asp-page="">Shows</a></li>
+            <li><a asp-area="" asp-page="">About</a></li>
+        </ul>
+        <a class="nav-brand" asp-area="" asp-page="" ><i class="fa fa-film"></i>  Movie labs</a>
+        <ul class="flex pt-2">
+            <li><a class="icon" asp-area="" asp-page=""><i class="fa fa-search"></i></a></li>
+            <li><a class="icon" asp-area="" asp-page=""><i class="fa fa-user"></i></a></li>
+            <li><a class="btn text-white" asp-area="" asp-page="">Subscribe</a></li>
+        </ul>
+    </nav>
+
+
+    </header>
+
+   
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2022 - Owidi MoviesApp - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
